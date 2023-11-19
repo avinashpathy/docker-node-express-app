@@ -12,8 +12,10 @@ services:
       - NODE_ENV=development
       - MONGO_USER=avinash
       - MONGO_PASSWORD=mypass
+
     command: npm run dev
   mongo:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=avinash
       - MONGO_INITDB_ROOT_PASSWORD=mypass
+
