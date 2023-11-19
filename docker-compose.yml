@@ -6,4 +6,16 @@ services:
       - 4000:4000
     environment:
       - PORT=4000
+    depends_on:
+      - mongo
 
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=avinash
+      - MONGO_INITDB_ROOT_PASSWORD=mypass
+    volumes:
+      - mongo-db:/data/db
+
+volumes:
+  mongo-db:
